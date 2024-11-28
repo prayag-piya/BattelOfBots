@@ -1,0 +1,74 @@
+Farmer John wants to fairly split haybales between his two favorite cows Bessie and Elsie. He has N
+ ( 1≤N≤2⋅105
+) haybales sorted in non-increasing order, where the i
+-th haybale has ai
+ units of hay (2⋅105≥a1≥a2≥⋯≥aN≥1
+).
+
+Farmer John is considering splitting a contiguous range of haybales al,…,ar
+ between Bessie and Elsie. He has decided to process the haybales in order from l
+ to r
+, and when processing the i
+-th haybale he will give it to the cow who currently has less hay (if it is a tie, he will give it to Bessie).
+
+You are given Q
+ (1≤Q≤2⋅105
+) queries, each with three integers l,r,x
+ (1≤l≤r≤N
+, |x|≤109
+). For each query, output how many more units of hay Bessie will have than Elsie after processing haybales l
+ to r
+, if Bessie starts with x
+ more units than Elsie. Note that this value is negative if Elsie ends up with more haybales than Bessie.
+
+INPUT FORMAT (input arrives from the terminal / stdin):
+First line contains N
+.
+Second line contains a1…aN
+.
+
+Third line contains Q
+.
+
+Next Q
+ lines contain l,r,x
+.
+
+OUTPUT FORMAT (print output to the terminal / stdout):
+Output Q
+ lines, containing the answer for each query.
+SAMPLE INPUT:
+2
+3 1
+15
+1 1 -2
+1 1 -1
+1 1 0
+1 1 1
+1 1 2
+1 2 -2
+1 2 -1
+1 2 0
+1 2 1
+1 2 2
+2 2 -2
+2 2 -1
+2 2 0
+2 2 1
+2 2 2
+SAMPLE OUTPUT:
+1
+2
+3
+-2
+-1
+0
+1
+2
+-1
+0
+-1
+0
+1
+0
+1
